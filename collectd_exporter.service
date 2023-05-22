@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus exporter for collectd data.
+Documentation=https://github.com/prometheus/collectd_exporter/
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=prometheus
+ExecStart=/usr/bin/collectd_exporter --collectd.listen-address=:25826
+
+[Install]
+WantedBy=multi-user.target

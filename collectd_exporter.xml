@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Collectd Prometheus Exporter</short>
+  <description>A prometheus exporter for collectd.</description>
+  <port protocol="tcp" port="9103"/>
+  <port protocol="udp" port="25826"/>
+</service>
